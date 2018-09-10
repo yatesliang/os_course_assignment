@@ -33,7 +33,7 @@ OBJS		= kernel/kernel.o lib/syscall.o kernel/start.o kernel/main.o\
 			lib/kliba.o lib/klib.o lib/string.o lib/ls.o lib/sl.o lib/misc.o lib/mkdir.o\
 			lib/open.o lib/read.o lib/write.o lib/close.o lib/unlink.o\
 			lib/getpid.o lib/syslog.o\
-			applications/print.o  applications/calculator.o applications/2048.o applications/pickstick.o applications/clearMine.o\
+			applications/print.o  applications/calculator.o applications/2048.o applications/pickstick.o applications/clearMine.o applications/guess.o\
 			fs/main.o fs/open.o fs/misc.o fs/read_write.o\
 			fs/link.o\
 			fs/disklog.o
@@ -179,6 +179,9 @@ applications/calculator.o: applications/calculator.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 applications/clearMine.o: applications/clearMine.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+applications/guess.o: applications/guess.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 applications/2048.o: applications/2048.c

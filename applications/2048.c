@@ -10,38 +10,6 @@
 #include "global.h"
 #include "proto.h"
 
-
-//游戏运行库
-
-unsigned int _myseed2 = 0xDEADBEEF;
-
-void smyRand(unsigned int seed){
-    _myseed2 = seed;
-}
-
-int myRand() {
-    unsigned int next = _myseed2;
-    unsigned int result;
-
-    next *= 1103515245;
-    next += 12345;
-    result = ( unsigned int  ) ( next / 65536 ) % 2048;
-
-    next *= 1103515245;
-    next += 12345;
-    result <<= 10;
-    result ^= ( unsigned int ) ( next / 65536 ) % 1024;
-
-    next *= 1103515245;
-    next += 12345;
-    result <<= 10;
-    result ^= ( unsigned int ) ( next / 65536 ) % 1024;
-
-    _myseed2 = next;
-
-    return result;
-}
-
 int mat_init(int *mat);
 
 int mat_left(int *mat);
@@ -285,9 +253,9 @@ int mat_insert(int *mat){
         }
     }
     if(k == 0) return 0;
-    k = temp[myRand() % k];
+    k = temp[rand() % k];
     //随便给一个地方2或者4
-    mat[((k-k%4)/4)*4+k%4]=2<<(myRand()%2);
+    mat[((k-k%4)/4)*4+k%4]=2<<(rand()%2);
     return 1;
 }
 
