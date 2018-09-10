@@ -37,6 +37,7 @@ int guessNumber()
 			while(count1)
 			{
 				clearArray(buffer);
+				if(count1 != 6) printf("Wrong! ");
 				printf("You still have: %d times to try.\n",count1);
 				printf("Input your answer(range:%d - %d) : ",min,max);
 				i = read(0, buffer, 128);
