@@ -52,16 +52,18 @@ int clearMine()
   while(1)  
   {  
     printf("clear mine!!\n");  
+    printf("============================================\n\n");
      
     for(i=0;i<8;i++)  
-      {  
+      {
+        printf("         ");  
         for(j=0;j<8;j++)  
           {  
             printf("%c ",ui[i][j]);  
           }  
          printf("\n");  
      }  
-
+    printf("\n============================================\n\n");
      
     printf("please enter the row number:");  
     clearTheArray(x, 2);
@@ -92,8 +94,6 @@ int clearMine()
       l=l-1;    
            
       //没有踩到雷的情况  判断周围有几个雷 并把数字显示在 界面上  
-      //-1 -1    -1, 0   -1,+1   0 ,-1   0 ,+1   +1 ,-1    +1,0   +1 ,+1   
-      
       //n=map[h-1][l-1]+map[h-1][l]+map[h-1][l+1]+map[h][l-1]+map[h][l+1]+map[h+1][l-1]+map[h+1][l+1]+map[h+1][l];  
       i=0;  
       

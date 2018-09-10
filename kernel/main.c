@@ -403,6 +403,7 @@ void shell(char *tty_name){
                 addTwoString(temp,current_dirr,arg1);
                 memcpy(arg1,temp,512);                
             }
+
             //首先获得文件内容
             fd = open(arg1, O_RDWR);
             if (fd == -1)
@@ -418,6 +419,7 @@ void shell(char *tty_name){
                 addTwoString(temp,current_dirr,arg2);
                 memcpy(arg2,temp,512);                
             }
+
             /*然后创建文件*/
             fd = open(arg2, O_CREAT | O_RDWR);
             if (fd == -1)
@@ -647,7 +649,6 @@ void printTitle()
 {
     clear(); 	
 
-  //  disp_color_str("dddddddddddddddd\n", 0x9);
     if(current_console==0){
     	displayWelcomeInfo();
     }
@@ -771,10 +772,10 @@ void help()
     printf("    delete      [filename]        : Delete a file\n");
     printf("    mkdir       [directory name]  : create a directory\n");
     printf("    cd          [directory name]  : enter a directory\n");
+    printf("    print       [content]         : Print the information given\n");
     printf("    clearMine                     : Play a mine clearance Game\n");
     printf("    pickstick                     : play a pick stick game\n");
-    printf("    calculator                    : Run a calculator\n");
-    printf("    print       [content]         : Print the information given\n");
+    //printf("    calculator                    : Run a calculator\n");
     printf("    2048                          : Start a new 2048 game\n");
     printf("==============================================================================\n");
 }
@@ -788,7 +789,6 @@ void ProcessManage()
     printf("-----------------------------------------------------------------------------\n");
     for ( i = 0 ; i < NR_TASKS + NR_PROCS ; ++i )//逐个遍历
     {
-        /*if ( proc_table[i].priority == 0) continue;//系统资源跳过*/
         printf("        %d           %s            %d                yes\n", proc_table[i].pid, proc_table[i].name, proc_table[i].priority);
     }
     printf("=============================================================================\n");
