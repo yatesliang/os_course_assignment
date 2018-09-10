@@ -383,7 +383,7 @@ LOAD fs/disklog.o
 .plt.sec
  *(.plt.sec)
 
-.text           0x0000000000001000    0x11289
+.text           0x0000000000001000    0x1128d
  *(.text.unlikely .text.*_unlikely .text.unlikely.*)
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
@@ -572,56 +572,56 @@ LOAD fs/disklog.o
                 0x000000000000bcf1                syslog
  .text          0x000000000000bdd9       0x2e applications/print.o
                 0x000000000000bdd9                myPrint
- .text          0x000000000000be07      0x394 applications/calculator.o
+ .text          0x000000000000be07      0x398 applications/calculator.o
                 0x000000000000be07                calculator
-                0x000000000000c0cc                getNum
-                0x000000000000c158                clearArray
- .text          0x000000000000c19b      0xc69 applications/2048.o
-                0x000000000000c19b                run2048
-                0x000000000000c44c                mat_init
-                0x000000000000c48d                mat_left
-                0x000000000000c64e                mat_right
-                0x000000000000c80f                mat_up
-                0x000000000000c9d0                mat_down
-                0x000000000000cb91                mat_reach
-                0x000000000000cbf9                mat_insert
-                0x000000000000cd2d                mat_print
-                0x000000000000cdd1                ClearArr
- .text          0x000000000000ce04      0x25b applications/pickstick.o
-                0x000000000000ce04                randomBetween
-                0x000000000000ce68                pickSticks
- .text          0x000000000000d05f      0x6fb applications/clearMine.o
-                0x000000000000d05f                clearMine
-                0x000000000000d727                clearTheArray
- .text          0x000000000000d75a      0x309 applications/guess.o
-                0x000000000000d75a                guessNumber
-                0x000000000000d994                getNumber
-                0x000000000000da20                ClearArray
- .text          0x000000000000da63      0xf7b fs/main.o
-                0x000000000000da63                task_fs
-                0x000000000000e43e                rw_sector
-                0x000000000000e693                get_super_block
-                0x000000000000e6f5                get_inode
-                0x000000000000e877                put_inode
-                0x000000000000e8cb                sync_inode
- .text          0x000000000000e9de      0xfa7 fs/open.o
-                0x000000000000e9de                do_open
-                0x000000000000ef79                do_close
-                0x000000000000eff1                do_ls
-                0x000000000000f21f                do_mkdir
-                0x000000000000f32c                do_lseek
- .text          0x000000000000f985      0x4e3 fs/misc.o
-                0x000000000000f985                find_entry
-                0x000000000000faf2                search_file
-                0x000000000000fc64                strip_path
- .text          0x000000000000fe68      0x54e fs/read_write.o
-                0x000000000000fe68                do_rdwt
- .text          0x00000000000103b6      0x896 fs/link.o
-                0x00000000000103b6                do_unlink
- .text          0x0000000000010c4c     0x163d fs/disklog.o
-                0x0000000000010c4c                do_disklog
-                0x0000000000010d06                disklog
-                0x0000000000011241                dump_fd_graph
+                0x000000000000c0d0                getNum
+                0x000000000000c15c                clearArray
+ .text          0x000000000000c19f      0xc69 applications/2048.o
+                0x000000000000c19f                run2048
+                0x000000000000c450                mat_init
+                0x000000000000c491                mat_left
+                0x000000000000c652                mat_right
+                0x000000000000c813                mat_up
+                0x000000000000c9d4                mat_down
+                0x000000000000cb95                mat_reach
+                0x000000000000cbfd                mat_insert
+                0x000000000000cd31                mat_print
+                0x000000000000cdd5                ClearArr
+ .text          0x000000000000ce08      0x25b applications/pickstick.o
+                0x000000000000ce08                randomBetween
+                0x000000000000ce6c                pickSticks
+ .text          0x000000000000d063      0x6fb applications/clearMine.o
+                0x000000000000d063                clearMine
+                0x000000000000d72b                clearTheArray
+ .text          0x000000000000d75e      0x309 applications/guess.o
+                0x000000000000d75e                guessNumber
+                0x000000000000d998                getNumber
+                0x000000000000da24                ClearArray
+ .text          0x000000000000da67      0xf7b fs/main.o
+                0x000000000000da67                task_fs
+                0x000000000000e442                rw_sector
+                0x000000000000e697                get_super_block
+                0x000000000000e6f9                get_inode
+                0x000000000000e87b                put_inode
+                0x000000000000e8cf                sync_inode
+ .text          0x000000000000e9e2      0xfa7 fs/open.o
+                0x000000000000e9e2                do_open
+                0x000000000000ef7d                do_close
+                0x000000000000eff5                do_ls
+                0x000000000000f223                do_mkdir
+                0x000000000000f330                do_lseek
+ .text          0x000000000000f989      0x4e3 fs/misc.o
+                0x000000000000f989                find_entry
+                0x000000000000faf6                search_file
+                0x000000000000fc68                strip_path
+ .text          0x000000000000fe6c      0x54e fs/read_write.o
+                0x000000000000fe6c                do_rdwt
+ .text          0x00000000000103ba      0x896 fs/link.o
+                0x00000000000103ba                do_unlink
+ .text          0x0000000000010c50     0x163d fs/disklog.o
+                0x0000000000010c50                do_disklog
+                0x0000000000010d0a                disklog
+                0x0000000000011245                dump_fd_graph
  *(.gnu.warning)
 
 .fini

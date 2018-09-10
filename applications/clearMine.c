@@ -1,14 +1,3 @@
-#include "type.h"
-#include "stdio.h"
-#include "const.h"
-#include "protect.h"
-#include "string.h"
-#include "fs.h"
-#include "proc.h"
-#include "tty.h"
-#include "console.h"
-#include "global.h"
-#include "proto.h"
 
 //使用二维数组实现 扫雷  
 int clearMine()

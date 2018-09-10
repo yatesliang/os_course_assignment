@@ -567,8 +567,6 @@ void TestA()
 {
     //0号终端
     char tty_name[] = "/dev_tty0";
-    //char username[128];
-    //char password[128];
    shell(tty_name);
 
 }
@@ -589,8 +587,6 @@ void TestB()
 //C进程
 void TestC()
 {
-    //char tty_name[] = ;
-	//shell("/dev_tty2");
 	assert(0);
 }
 
@@ -684,8 +680,6 @@ int verifyFilePass(char *path, int fd_stdin)
 
     struct dir_entry *pde = find_entry(path);
 
-    /*printl(pde->pass);*/
-
     if (strcmp(pde->pass, "") == 0)
         return 1;
 
@@ -701,7 +695,6 @@ int verifyFilePass(char *path, int fd_stdin)
 void doEncrypt(char *path, int fd_stdin)
 {
     //查找文件
-    /*struct dir_entry *pde = find_entry(path);*/
 
     char pass[128] = {0};
 
@@ -710,10 +703,9 @@ void doEncrypt(char *path, int fd_stdin)
 
     if (strcmp(pass, "") == 0)
     {
-        /*printl("A blank password!\n");*/
         strcpy(pass, "");
     }
-    //以下内容用于加密
+    // used for lock file
     int i, j;
 
     char filename[MAX_PATH];
@@ -761,7 +753,6 @@ void doEncrypt(char *path, int fd_stdin)
 
 }
 
-
 void help()
 {
     printf("=============================help information==================================\n");
@@ -783,15 +774,14 @@ void help()
     printf("    calculator                    : Run a calculator\n");
     printf("    2048                          : Start a new 2048 game\n");
     printf("==============================================================================\n");
-    //printf("%d\n", rand());
 }
 
 void ProcessManage()
 {
     int i;
     printf("=============================================================================\n");
-    printf("      processID      |    name       | spriority    | running?\n");
-    //进程号，进程名，优先级，是否是系统进程，是否在运行
+    printf("      processID      |    name       |  priority    | running?\n");
+    // process id，process name，priority，system process? ，running?
     printf("-----------------------------------------------------------------------------\n");
     for ( i = 0 ; i < NR_TASKS + NR_PROCS ; ++i )//逐个遍历
     {
@@ -800,7 +790,7 @@ void ProcessManage()
     printf("=============================================================================\n");
 }
 
-//游戏运行库
+// random function
 unsigned int _seed2 = 0xDEADBEEF;
 
 void srand(unsigned int seed){

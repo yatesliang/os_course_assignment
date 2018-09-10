@@ -1,14 +1,3 @@
-#include "type.h"
-#include "stdio.h"
-#include "const.h"
-#include "protect.h"
-#include "string.h"
-#include "fs.h"
-#include "proc.h"
-#include "tty.h"
-#include "console.h"
-#include "global.h"
-#include "proto.h"
 
 int calculator()
 {
@@ -29,6 +18,10 @@ int calculator()
 		num1 = getNum(bufr);
 		
 		printf("num1: %d\n", num1);
+		
+		printf("Please input op( + - * / ):");
+		i = read(0, bufr, 1);
+		char c = bufr[0];
 		printf("Please input num2:");
 		clearArray(bufr);
 		i = read(0, bufr, 128);	
@@ -36,9 +29,8 @@ int calculator()
 			break;
 		num2 = getNum(bufr);
 		printf("num2: %d\n", num2);
-		printf("Please input op( + - * / ):");
-		i = read(0, bufr, 1);
-		switch(bufr[0])
+		
+		switch(c)
 		{
 			case '+':
 				res = num1 + num2;
