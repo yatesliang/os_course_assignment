@@ -1,2 +1,2 @@
-# os_course_assignment
-For OS summer course assignment
+# OS
+> 利用C语言及汇编实现的简易操作系统
