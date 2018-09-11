@@ -40,12 +40,12 @@ int clearMine()
   printf("=============================================\n\n");
   while(1)  
   {  
-    printf("clear mine!!\n");  
+    printf("                Clear Mine\n");  
     printf("============================================\n\n");
      
     for(i=0;i<8;i++)  
       {
-        printf("         ");  
+        printf("             ");  
         for(j=0;j<8;j++)  
           {  
             printf("%c ",ui[i][j]);  

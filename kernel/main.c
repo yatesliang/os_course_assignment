@@ -476,9 +476,6 @@ void shell(char *tty_name){
         else if (strcmp(cmd, "clearMine") == 0){
             clearMine();
         }
-        else if (strcmp(cmd, "print") == 0){
-        	myPrint(arg1);
-        }
         else if (strcmp(cmd, "2048") == 0)
         {
             run2048();

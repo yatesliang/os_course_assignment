@@ -22,7 +22,7 @@ int guessNumber()
 			target = rand()%1000;
 			int count1 = 6;
 			int guess = 0;
-			printf("Your play times: %d\n",playTimes);
+			printf("\nYour play times: %d\n",playTimes);
 			while(count1)
 			{
 				clearArray(buffer);

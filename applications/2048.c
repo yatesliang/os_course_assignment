@@ -24,11 +24,11 @@ int run2048(){
     printf("=            5. Enter q to quit               =\n");
     printf("===============================================\n");
     while(1){
-        printl("Init Matrix\n");
+        printl("                Matrix\n");
         mat_init(mat);
 
         while(1){
-            printf("type in the direction(w a s d):");
+            printf("Type a direction(w a s d):");
             ClearArr(keys, 128);
             int r = read(0, keys, 1);
 
@@ -49,26 +49,26 @@ int run2048(){
                 case 'q':
                     return 0;
                 default:
-                    printl("Input Invalid, Please retry\n");
+                    printl("Input invalid, please retry!\n");
                     continue;
             }
 
             if(state==0){
-                printl("can't add,try again!\n");
+                printl("It doesn't word,try again!\n");
                 continue;
             }
             if(mat_reach(mat)){
-                printf("You Win\n");
+                printf("You win the game!\n");
                 break;
             }
             if(mat_insert(mat) == 0){
-                printf("You Lose\n");
+                printf("You lose the game!\n");
                 break;
             }
             mat_print(mat);
         }
 
-        printf("another one?(y or n):");
+        printf("Another game?(y or n):");
 
         ClearArr(keys, 128);
         int r = read(0, keys, 128);
@@ -249,9 +249,10 @@ int mat_insert(int *mat){
 }
 
 void mat_print(int *mat){
-    printf("=====================================\n\n");
+    printf("===============================================\n\n");
     int i, j;
     for(i = 0; i < 4; i++){
+        printf("   ");
         for(j = 0; j < 4; j++){
             //这里需要规格化
             printf("%8d", mat[i*4+j]);
@@ -259,7 +260,7 @@ void mat_print(int *mat){
         }
         printf("\n\n");
     }
-    printf("=====================================\n\n");
+    printf("===============================================\n\n");
 }
 
 void ClearArr(char *arr, int length)
