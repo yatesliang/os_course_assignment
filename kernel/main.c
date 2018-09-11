@@ -644,10 +644,10 @@ void clearArr(char *arr, int length)
 
 void printTitle()
 {
-    clear(); 	
+    clear();
 
     if(current_console==0){
-    	displayWelcomeInfo();
+    	//displayWelcomeInfo();
     }
     else{
     	printf("[TTY #%d]\n", current_console);

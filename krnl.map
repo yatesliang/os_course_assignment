@@ -427,7 +427,7 @@ LOAD fs/disklog.o
  .text.__x86.get_pc_thunk.bx
                 0x00000000000014fb        0x4 kernel/start.o
                 0x00000000000014fb                __x86.get_pc_thunk.bx
- .text          0x00000000000014ff     0x1f41 kernel/main.o
+ .text          0x00000000000014ff     0x1f3a kernel/main.o
                 0x00000000000014ff                kernel_main
                 0x00000000000017b2                get_ticks
                 0x00000000000017f5                addTwoString
@@ -441,78 +441,79 @@ LOAD fs/disklog.o
                 0x0000000000002bec                findpass
                 0x0000000000002c68                clearArr
                 0x0000000000002c9b                printTitle
-                0x0000000000002ce6                clear
-                0x0000000000002da4                doTest
-                0x0000000000002e15                verifyFilePass
-                0x0000000000002eb9                doEncrypt
-                0x00000000000030e7                help
-                0x00000000000032af                ProcessManage
-                0x000000000000337a                srand
-                0x0000000000003393                rand
+                0x0000000000002cdf                clear
+                0x0000000000002d9d                doTest
+                0x0000000000002e0e                verifyFilePass
+                0x0000000000002eb2                doEncrypt
+                0x00000000000030e0                help
+                0x00000000000032a8                ProcessManage
+                0x0000000000003373                srand
+                0x000000000000338c                rand
  .text.__x86.get_pc_thunk.ax
-                0x0000000000003440        0x4 kernel/main.o
-                0x0000000000003440                __x86.get_pc_thunk.ax
+                0x0000000000003439        0x4 kernel/main.o
+                0x0000000000003439                __x86.get_pc_thunk.ax
  .text.__x86.get_pc_thunk.dx
-                0x0000000000003444        0x4 kernel/main.o
-                0x0000000000003444                __x86.get_pc_thunk.dx
- .text          0x0000000000003448      0x157 kernel/clock.o
-                0x0000000000003448                clock_handler
-                0x00000000000034ec                milli_delay
-                0x0000000000003536                init_clock
- .text          0x000000000000359f      0x7a7 kernel/keyboard.o
-                0x000000000000359f                keyboard_handler
-                0x0000000000003624                init_keyboard
-                0x00000000000036ee                keyboard_read
- .text          0x0000000000003d46      0xad3 kernel/tty.o
-                0x0000000000003d46                task_tty
-                0x0000000000003f31                in_process
-                0x00000000000044bb                sys_printx
-                0x0000000000004683                dump_tty_buf
- .text          0x0000000000004819      0x889 kernel/console.o
-                0x0000000000004819                init_screen
-                0x00000000000049a8                out_char
-                0x0000000000004c66                clear_screen
-                0x0000000000004caa                is_current_console
-                0x0000000000004cdd                set_cursor
-                0x0000000000004d54                set_video_start_addr
-                0x0000000000004dcb                select_console
-                0x0000000000004e1e                scroll_screen
-                0x0000000000005019                flush
+                0x000000000000343d        0x4 kernel/main.o
+                0x000000000000343d                __x86.get_pc_thunk.dx
+ .text          0x0000000000003441      0x157 kernel/clock.o
+                0x0000000000003441                clock_handler
+                0x00000000000034e5                milli_delay
+                0x000000000000352f                init_clock
+ .text          0x0000000000003598      0x7a7 kernel/keyboard.o
+                0x0000000000003598                keyboard_handler
+                0x000000000000361d                init_keyboard
+                0x00000000000036e7                keyboard_read
+ .text          0x0000000000003d3f      0xad3 kernel/tty.o
+                0x0000000000003d3f                task_tty
+                0x0000000000003f2a                in_process
+                0x00000000000044b4                sys_printx
+                0x000000000000467c                dump_tty_buf
+ .text          0x0000000000004812      0x889 kernel/console.o
+                0x0000000000004812                init_screen
+                0x00000000000049a1                out_char
+                0x0000000000004c5f                clear_screen
+                0x0000000000004ca3                is_current_console
+                0x0000000000004cd6                set_cursor
+                0x0000000000004d4d                set_video_start_addr
+                0x0000000000004dc4                select_console
+                0x0000000000004e17                scroll_screen
+                0x0000000000005012                flush
  .text.__x86.get_pc_thunk.cx
-                0x00000000000050a2        0x4 kernel/console.o
-                0x00000000000050a2                __x86.get_pc_thunk.cx
- .text          0x00000000000050a6      0x167 kernel/i8259.o
-                0x00000000000050a6                init_8259A
-                0x000000000000518e                spurious_irq
-                0x00000000000051d8                put_irq_handler
- .text          0x000000000000520d        0x0 kernel/global.o
- .text          0x000000000000520d      0x6c7 kernel/protect.o
-                0x000000000000520d                init_prot
-                0x00000000000056aa                seg2phys
-                0x000000000000577d                exception_handler
- .text          0x00000000000058d4     0x1a09 kernel/proc.o
-                0x00000000000058d4                schedule
-                0x0000000000005988                sys_sendrec
-                0x0000000000005acf                send_recv
-                0x0000000000005ba1                ldt_seg_linear
-                0x0000000000005bf5                va2la
-                0x0000000000005c6e                reset_msg
-                0x0000000000006c5c                inform_int
-                0x0000000000006e08                dump_proc
-                0x00000000000071ac                dump_msg
- .text          0x00000000000072dd       0x96 kernel/systask.o
-                0x00000000000072dd                task_sys
- .text          0x0000000000007373      0xeb4 kernel/hd.o
-                0x0000000000007373                task_hd
-                0x00000000000081ec                hd_handler
- .text          0x0000000000008227      0x9f8 kernel/animation.o
-                0x0000000000008227                animation
- .text          0x0000000000008c1f       0xd1 lib/printf.o
-                0x0000000000008c1f                printf
-                0x0000000000008c9f                printl
- .text          0x0000000000008cf0      0x330 lib/vsprintf.o
-                0x0000000000008d60                vsprintf
-                0x0000000000008ff0                sprintf
+                0x000000000000509b        0x4 kernel/console.o
+                0x000000000000509b                __x86.get_pc_thunk.cx
+ .text          0x000000000000509f      0x167 kernel/i8259.o
+                0x000000000000509f                init_8259A
+                0x0000000000005187                spurious_irq
+                0x00000000000051d1                put_irq_handler
+ .text          0x0000000000005206        0x0 kernel/global.o
+ .text          0x0000000000005206      0x6c7 kernel/protect.o
+                0x0000000000005206                init_prot
+                0x00000000000056a3                seg2phys
+                0x0000000000005776                exception_handler
+ .text          0x00000000000058cd     0x1a09 kernel/proc.o
+                0x00000000000058cd                schedule
+                0x0000000000005981                sys_sendrec
+                0x0000000000005ac8                send_recv
+                0x0000000000005b9a                ldt_seg_linear
+                0x0000000000005bee                va2la
+                0x0000000000005c67                reset_msg
+                0x0000000000006c55                inform_int
+                0x0000000000006e01                dump_proc
+                0x00000000000071a5                dump_msg
+ .text          0x00000000000072d6       0x96 kernel/systask.o
+                0x00000000000072d6                task_sys
+ .text          0x000000000000736c      0xeb4 kernel/hd.o
+                0x000000000000736c                task_hd
+                0x00000000000081e5                hd_handler
+ .text          0x0000000000008220      0x9f8 kernel/animation.o
+                0x0000000000008220                animation
+ .text          0x0000000000008c18       0xd1 lib/printf.o
+                0x0000000000008c18                printf
+                0x0000000000008c98                printl
+ .text          0x0000000000008ce9      0x330 lib/vsprintf.o
+                0x0000000000008d59                vsprintf
+                0x0000000000008fe9                sprintf
+ *fill*         0x0000000000009019        0x7 
  .text          0x0000000000009020      0x19a lib/kliba.o
                 0x0000000000009020                disp_str
                 0x000000000000905e                disp_color_str
