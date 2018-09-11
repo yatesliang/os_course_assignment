@@ -755,25 +755,30 @@ void doEncrypt(char *path, int fd_stdin)
 
 void help()
 {
-    printf("=============================help information==================================\n");
-    printf("===============================================================================\n"); 
-    printf("    welcome                       : Print welcome information\n");
-    printf("    clear                         : Clear the screen\n");
-    printf("    process                       : A process manage, show you all process-info\n");
-    printf("    ls                            : List files in current directory\n");
-    printf("    create      [filename]        : Create a new file\n");
-    printf("    view        [filename]        : Print the file\n");
-    printf("    modify      [filename]        : Modify the content of the file\n");
-    printf("    delete      [filename]        : Delete a file\n");
-    printf("    mkdir       [directory name]  : create a directory\n");
-    printf("    cd          [directory name]  : enter a directory\n");
-    printf("    print       [content]         : Print the information given\n");
-    printf("    guessNum                      : Play a guess number game\n");
-    printf("    clearMine                     : Play a mine clearance game\n");
-    printf("    pickstick                     : play a pick stick game\n");
-    printf("    calculator                    : Run a calculator\n");
-    printf("    2048                          : Start a new 2048 game\n");
-    printf("==============================================================================\n");
+    printf("===============================================================================\n");
+    printf("=                      _/    _/  _/_/_/_/  _/        _/_/_/                   =\n");    
+    printf("=                     _/    _/  _/        _/        _/    _/                  =\n");   
+    printf("=                    _/_/_/_/  _/_/_/    _/        _/_/_/                     =\n");      
+    printf("=                   _/    _/  _/        _/        _/                          =\n");           
+    printf("=                  _/    _/  _/_/_/_/  _/_/_/_/  _/                           =\n");             
+    printf("===============================================================================\n");
+    printf("=======================================================Command=================\n");
+    printf("=    Welcome information               ---             welcome                =\n");
+    printf("=    Clear the screen                  ---              clear                 =\n");
+    printf("=    Print all process information     ---             process                =\n");
+    printf("=    List files in current directory   ---               ls                   =\n");
+    printf("=    Create a new file                 ---         create <filename>          =\n");
+    printf("=    Print a file                      ---          view <filename>           =\n");
+    printf("=    Modify a file                     ---         modify <filename>          =\n");
+    printf("=    Delete a file                     ---         delete <filename>          =\n");
+    printf("=    Create a directory                ---       mkdir <directory name>       =\n");
+    printf("=    Enter a directory                 ---        cd <directory name>         =\n");
+    printf("=    Play a guess number game          ---             guessNum               =\n");
+    printf("=    Play a mine clearance game        ---            clearMine               =\n");
+    printf("=    Play a pick stick game            ---            pickstick               =\n");
+    printf("=    Start a new 2048 game             ---              2048                  =\n");
+    printf("=    Run a calculator                  ---           calculator               =\n");
+    printf("===============================================================================\n");
 }
 
 void ProcessManage()
